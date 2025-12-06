@@ -1,0 +1,49 @@
+name: rahmaty_jehanyan
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  audioplayers: ^6.0.0
+  video_player: ^2.9.1
+  youtube_player_flutter: ^9.1.1
+  flutter_pdfview: ^1.3.2
+  path_provider: ^2.1.2
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1   # <-- Added for changing the app icon
+
+# Configuration for flutter_launcher_icons
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/app_icon.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - images/
+    - assets/pdf/farmwda.pdf
+    - assets/sounds/sbah.mp3
+    - assets/sounds/ewara.mp3
+    - assets/sounds/xawten.mp3
+    - assets/sounds/nwrj.mp3
+    - assets/sounds/hastanlaxaw.mp3
+    - assets/sounds/bang.mp3
+    - assets/sounds/mzgawt.mp3
+    - assets/sounds/dastnwhj.mp3
+    - assets/sounds/mal.mp3
+    - assets/sounds/saraw.mp3
+    - assets/sounds/xwardn.mp3
+  
