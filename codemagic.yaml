@@ -17,17 +17,7 @@ workflows:
 
     publishing:
       app_store_connect:
-       apple_id: "rastykhalid756@gmail.com"
-api_key:
-  key_id: "8K7C4RX535"
-  issuer_id: "f76bd0fc-409d-491c-8a61-ff6eb4b2dcb3"
-  private_key: |
-   -----BEGIN PRIVATE KEY-----
-   MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgc7QTYL08EoQ/1Aan
-   oH35chXnWg27XmVqnoqgOpys45agCgYIKoZIzj0DAQehRANCAAShX76Kegi2f9ry
-   PnYJUkPHu/ReVDX/NmFdeYReRn4LfINrIQzYfaHRJvKbOZyjRHzn5pqL9dYAd7ZB
-   thgreZEN
-   -----END PRIVATE KEY-----
+
 
         submit_to_testflight: true
         submit_to_app_store: false
