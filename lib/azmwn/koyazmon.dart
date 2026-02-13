@@ -83,7 +83,13 @@ import 'package:rahmaty_jehanyan/azmwn/shast_ta_shastwno/azmony_shast_ping.dart'
 import 'package:rahmaty_jehanyan/azmwn/shast_ta_shastwno/azmony_shast_shash.dart';
 import 'package:rahmaty_jehanyan/azmwn/shast_ta_shastwno/azmony_shast_hwat.dart';
 import 'package:rahmaty_jehanyan/azmwn/shast_ta_shastwno/azmony_shast_hasht.dart';
+import 'package:rahmaty_jehanyan/azmwn/shast_ta_shastwno/azmony_shast_no.dart';
 
+// hafta_ta_haftawno
+import 'package:rahmaty_jehanyan/azmwn/hafta_ta_haftawno/hafta.dart';
+import 'package:rahmaty_jehanyan/azmwn/hafta_ta_haftawno/hafta_yak.dart';
+import 'package:rahmaty_jehanyan/azmwn/hafta_ta_haftawno/haft_dw.dart';
+import 'package:rahmaty_jehanyan/azmwn/hafta_ta_haftawno/haft_si.dart';
 
 
 class Koyazmon extends StatefulWidget {
@@ -851,6 +857,61 @@ class _XwindnawaZikrState extends State<Koyazmon> {
                Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => const AzmonyShastHasht()),
+          );
+            },
+          ),
+
+                ListTile(
+            leading: const Icon(Icons.format_list_numbered_outlined,color: Colors.blueAccent),
+            title: const Text("ئەزموونی شەست و نۆ"),
+            onTap: () {
+               Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const AzmonyShastNo()),
+          );
+            },
+          ),
+
+                ListTile(
+            leading: const Icon(Icons.format_list_numbered_outlined,color: Colors.blueAccent),
+            title: const Text("ئەزموونی حەفتا "),
+            onTap: () {
+               Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const Hafta()),
+          );
+            },
+          ),
+
+                    ListTile(
+            leading: const Icon(Icons.format_list_numbered_outlined,color: Colors.blueAccent),
+            title: const Text("ئەزموونی حەفتا و یەک "),
+            onTap: () {
+               Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const HaftaYak()),
+          );
+            },
+          ),
+
+                    ListTile(
+            leading: const Icon(Icons.format_list_numbered_outlined,color: Colors.blueAccent),
+            title: const Text("ئەزموونی حەفتا و دوو "),
+            onTap: () {
+               Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const HaftDw()),
+          );
+            },
+          ),
+
+                    ListTile(
+            leading: const Icon(Icons.format_list_numbered_outlined,color: Colors.blueAccent),
+            title: const Text("ئەزموونی حەفتا و سێ "),
+            onTap: () {
+               Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const HaftSi()),
           );
             },
           ),

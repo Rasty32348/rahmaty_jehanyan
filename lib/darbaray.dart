@@ -18,7 +18,7 @@ class _NasandnState extends State<nasandn> {
           backgroundColor: Colors.blue.shade100,
           title: Center(
             child: Text(
-             "دەربارەی پڕۆگرامەر",
+             "کۆمپانیای دروستکەر",
               style: const TextStyle(color: Colors.white),
             ),
           ),
