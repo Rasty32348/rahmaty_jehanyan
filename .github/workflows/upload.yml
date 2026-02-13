@@ -13,18 +13,23 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # دابەزاندنی هەموو فایلەکان بۆ ئەوەی دڵنیا بین فایلەکە لێرەیە
-          gh release download v1.0 --pattern "*.ipa"
-          # گۆڕینی ناوی هەر فایلێکی ipa کە هەبێت بۆ ناوێکی سادە
-          mv *.ipa upload_me.ipa
-          # نیشاندانی قەبارەی فایلەکە بۆ دڵنیایی لەوەی دابەزیوە
-          ls -lh upload_me.ipa
+          # دابەزاندنی فایلەکە لە ڕیلیسی v1.0
+          # بەکارهێنانی --pattern "*.ipa" بۆ ئەوەی هەر فایلێکی IPA هەبێت دایبگرێت
+          gh release download v1.0 --pattern "*.ipa" --clobber
+          
+          # گۆڕینی ناوی فایلە دابەزیوەکە بۆ ناوێکی جێگیر بۆ ئەوەی هەڵە نەبێت
+          mv *.ipa rahmaty_jehanyan.ipa
+          
+          # نیشاندانی قەبارە و زانیاری فایلەکە بۆ دڵنیایی لەوەی دابەزیوە
+          ls -lh rahmaty_jehanyan.ipa
 
       - name: Upload IPA to App Store
         run: |
-          # بەکارهێنانی فەرمانی نوێی ئەپڵ بۆ ناردن
+          # بەکارهێنانی altool بۆ ناردنی ئەپەکە
+          # زیادکردنی --verbose بۆ ئەوەی وردەکاری زۆرتر بدات ئەگەر شکستی هێنا
           xcrun altool --upload-app --type ios \
-            --file "upload_me.ipa" \
+            --file "rahmaty_jehanyan.ipa" \
             --username "rastykhalid756@gmail.com" \
             --password "${{ secrets.APPLE_PASSWORD }}" \
-            --show-progress
+            --show-progress \
+            --verbose
