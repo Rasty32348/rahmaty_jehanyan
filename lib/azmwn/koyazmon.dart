@@ -90,7 +90,7 @@ import 'package:rahmaty_jehanyan/azmwn/hafta_ta_haftawno/hafta.dart';
 import 'package:rahmaty_jehanyan/azmwn/hafta_ta_haftawno/hafta_yak.dart';
 import 'package:rahmaty_jehanyan/azmwn/hafta_ta_haftawno/haft_dw.dart';
 import 'package:rahmaty_jehanyan/azmwn/hafta_ta_haftawno/haft_si.dart';
-
+import 'package:rahmaty_jehanyan/azmwn/hafta_ta_haftawno/haft_chwar.dart';
 
 class Koyazmon extends StatefulWidget {
   const Koyazmon({super.key});
@@ -912,6 +912,17 @@ class _XwindnawaZikrState extends State<Koyazmon> {
                Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => const HaftSi()),
+          );
+            },
+          ),
+
+                     ListTile(
+            leading: const Icon(Icons.format_list_numbered_outlined,color: Colors.blueAccent),
+            title: const Text("ئەزموونی حەفتا و چوار "),
+            onTap: () {
+               Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const HaftChwar()),
           );
             },
           ),
